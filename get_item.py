@@ -4,8 +4,8 @@ from bs4 import BeautifulSoup
 import string
 import time
 import random
-import ConfigParser
 def get_items(url):
+     #经过ture.py验证过的可使用代理ip,做成ip池
      tab =  [{'http': 'http://210.75.3.50:8888'},
             {'http': 'http://210.242.179.103:8080'},
              {'http': 'http://210.176.52.109:80'},
@@ -29,7 +29,6 @@ def get_items(url):
 
      req = requests_session.post('https://login.1688.com/member/signin.htm', headers=headers)
 
-    # proxie = random.choice(proxies)
      req = requests_session.get(url, cookies=cookies,proxies = proxie)
 
      time .sleep(2)
