@@ -22,7 +22,7 @@ def get_channel(start_url):
                 page_url = link.get('href')
 
                 print page_url+'/page/contactinfo.htm'         # print links
-
+#下面是用上面的代码获取到的所有链接，你可以通过增加pages数，增加链接个数
 links_list ='''
 https://shop1447778988193.1688.com/page/contactinfo.htm
 https://ziyipretty.1688.com/page/contactinfo.htm
@@ -119,6 +119,7 @@ links = links_list.split()
 #print links
 
 for link in links :
+    #可能会爬取到无效网址或者个别网址select的位置不对，我们设置一个异常让程序继续进行
     try:
         get_items(link)
     except IndexError as e:
