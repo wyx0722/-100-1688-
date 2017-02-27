@@ -1,2 +1,8 @@
 # -100-1688-
 练手项目
+
+change_ip.py：用来获取代理ip，针对爬取的ip限制问题
+ture.py:用来验证获取的代理ip是否可用
+channel_extract.py:获取所有需要具体分析的链接，并执行爬虫任务
+get_item.py:用来解析最终链接上的内容，爬取联系方式
+test.text:存放get_item.py所需的cookie
